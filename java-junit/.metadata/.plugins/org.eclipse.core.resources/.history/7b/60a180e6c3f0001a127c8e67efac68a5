@@ -1,0 +1,5 @@
+package com.webstack.test;
+
+public class LifeCycleTest {
+
+}

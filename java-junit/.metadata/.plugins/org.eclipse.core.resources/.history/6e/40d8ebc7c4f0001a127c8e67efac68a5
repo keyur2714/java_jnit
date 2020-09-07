@@ -1,0 +1,22 @@
+package com.webstack.test;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.jupiter.api.Test;
+import org.junit.platform.runner.JUnitPlatform;
+import org.junit.runner.RunWith;
+
+@RunWith(JUnitPlatform.class)
+public class LifeCycleTest {
+
+	
+	@Test
+	public void checkName() {
+		String name = "keyur";
+		assertEquals("keyur", name);
+	}
+	
+	
+	
+	
+}

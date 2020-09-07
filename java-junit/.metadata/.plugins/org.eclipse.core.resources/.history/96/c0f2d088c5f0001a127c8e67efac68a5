@@ -1,0 +1,49 @@
+package com.webstack.test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.platform.runner.JUnitPlatform;
+import org.junit.runner.RunWith;
+
+@RunWith(JUnitPlatform.class)
+public class LifeCycleTest {
+
+	@BeforeAll
+	public static void beforeAll() {
+		System.out.println("Before All...");
+	}
+	
+	@BeforeEach
+	public void beforeEach() {
+		System.out.println("Before Each...!");
+	}
+	
+	@AfterEach
+	public void afterEach() {
+		System.out.println("After Each...!");
+	}
+	
+	@Test
+	public void checkName() {
+		String name = "keyur";
+		assertEquals("keyur", name);
+	}
+	
+	@Test
+	public void checkValidName() {
+		String name = "keyur";
+		assertNotEquals("denish", name);
+	}
+	
+	@AfterAll
+	public void afterAll() {
+		System.out.println("After All Good Bye...!");
+	}
+	
+}
